@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_dashboard" android:title="Dashboard" android:icon="@drawable/ic_menu"/>
+    <item android:id="@+id/nav_adduser" android:title="Add User" android:icon="@drawable/ic_menu"/>
+    <item android:id="@+id/nav_viewuser" android:title="View Users" android:icon="@drawable/ic_menu"/>
+</menu>

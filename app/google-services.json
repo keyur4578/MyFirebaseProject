@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732125671062",
+    "project_id": "myfirebaseproject-c93de",
+    "storage_bucket": "myfirebaseproject-c93de.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732125671062:android:14d6b186f3f036cc611cb7",
+        "android_client_info": {
+          "package_name": "com.karon.myfirebaseproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNiRP1XWoTL_qm3DhWXkHDq2lLrHiPE4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
