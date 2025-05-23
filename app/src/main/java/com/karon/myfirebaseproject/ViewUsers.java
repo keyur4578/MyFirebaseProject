@@ -1,5 +1,6 @@
 package com.karon.myfirebaseproject;
 
+import android.app.ComponentCaller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
@@ -50,9 +52,16 @@ public class ViewUsers extends AppCompatActivity implements UserAdapter.OnUserCl
         });
         mylistview = (ListView) findViewById(R.id.mylistview);
         loadData();
-
-
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data, @NonNull ComponentCaller caller) {
+        super.onActivityResult(requestCode, resultCode, data, caller);
+        if (requestCode == 123 && resultCode == RESULT_OK) {
+            loadData();
+        }
+    }
+
     void loadData()
     {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -118,6 +127,8 @@ public class ViewUsers extends AppCompatActivity implements UserAdapter.OnUserCl
         intent.putExtra("email",obj.getEmail().toString());
         intent.putExtra("mobilenumber",obj.getMobilenumber().toString());
         intent.putExtra("aboutme",obj.getAboutme().toString());
-        startActivity(intent);
+        startActivityForResult(intent,123);
     }
+
+
 }

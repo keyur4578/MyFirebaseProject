@@ -97,9 +97,13 @@ public class UpdateUser extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void unused) {
 
+                                Intent resultIntent = new Intent();
+                                setResult(RESULT_OK, resultIntent);
                                 finish();
-                                finish();
-                                startActivity(new Intent(UpdateUser.this,ViewUsers.class));
+
+//                                finish();
+//                                finish();
+//                                startActivity(new Intent(UpdateUser.this,ViewUsers.class));
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
